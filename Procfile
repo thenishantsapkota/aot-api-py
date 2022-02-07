@@ -1,1 +1,1 @@
-web: uvicorn aot_quotes.main:app
+web: uvicorn aot_quotes.main:app --host=0.0.0.0 --port=${PORT:-5000}
