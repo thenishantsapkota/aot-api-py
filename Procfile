@@ -1,1 +1,1 @@
-web: gunicorn -w 4 -k uvicorn.workers.UvicornWorker aot_quotes.main:app
+web: uvicorn aot_quotes.main:app
