@@ -16,7 +16,7 @@ class GetCBV(DBMixin):
         result = self.get_service.get_quote(self.session, self.engine)
         return {"quote": result}
 
-    @router.get("/int")
+    @router.get("/{query}")
     def random_list(self, query: int):
         if query < 1:
             raise HTTPException(status_code=404, detail="Heh? Why?")
