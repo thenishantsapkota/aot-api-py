@@ -7,9 +7,10 @@ from aot_quotes.mixins.database import DBMixin
 
 router = InferringRouter()
 
+
 @cbv(router)
 class GetCBV(DBMixin):
-    get_service : GetService = Depends(GetService)
+    get_service: GetService = Depends(GetService)
 
     @router.get("/")
     def random(self):
