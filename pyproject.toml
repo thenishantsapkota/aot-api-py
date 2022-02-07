@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aot_quotes_py"
-version = "0.1.0"
+version = "2.0.0"
 description = "An API which returns random AOT quote everytime it's invoked"
 authors = ["Nishant Sapkota <snishant306@gmail.com>"]
 license = "MIT"
