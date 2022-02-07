@@ -1,8 +1,8 @@
 import random
 import typing as t
-from email.quoprimime import quote
 
 from aot_quotes.common.db import Quotes
+from fastapi import HTTPException
 from sqlmodel import Session, select
 
 
@@ -25,6 +25,13 @@ class GetService:
 
             if result:
                 data = list()
+                if query > len(result):
+                    raise HTTPException(
+                        status_code=404,
+                        detail="Specified number exceeds the number of quotes. Total Quotes -> {}".format(
+                            len(result)
+                        ),
+                    )
                 items = random.sample(result, query)
                 for item in items:
                     data.append({"id": item[0].id, "quote": item[0].quote})
