@@ -17,6 +17,10 @@ poetry shell
 
 poetry install
 
+# Run the migration script the first time
+
+python -m migrations
+
 uvicorn aot_quotes.main:app --reload
 ```
 
