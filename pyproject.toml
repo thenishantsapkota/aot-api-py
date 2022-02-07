@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "aot_quotes_py"
+version = "0.1.0"
+description = "An API which returns random AOT quote everytime it's invoked"
+authors = ["Nishant Sapkota <snishant306@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = {extras = ["uvicorn", "utils"], version = "^0.73.0"}
+sqlmodel = "^0.0.6"
+fastapi-utils = "^0.2.1"
+async_lru = "^1.0.2"
+aiofiles = "^0.8.0"
+uvicorn = {extras = ["standard"], version = "^0.17.4"}
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
